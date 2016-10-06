@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Omid&#39;s Notes</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://omid.sh/"/>
+  <updated>2016-10-06T07:24:56.998Z</updated>
+  <id>http://omid.sh/</id>
+  
+  <author>
+    <name>Omid Rad</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>We must use &quot;time&quot; creatively. - Martin Luther King, Jr.</title>
+    <link href="http://omid.sh/2016/10/04/time/"/>
+    <id>http://omid.sh/2016/10/04/time/</id>
+    <published>2016-10-04T15:58:01.000Z</published>
+    <updated>2016-10-06T07:24:56.998Z</updated>
+    
+    <content type="html"><![CDATA[<p>The default <code>time</code> command in most Linux distributions is not a REAL command, it comes as built-in functionality of shells like “bash”.</p>
+<p>But, when you type <code>man time</code>, you will get a manual for a time utility which may not be installed.</p>
+<p>For example, in Arch Linux, run <code>sudo pacman -S time</code> to install the GNU version of the “time” utility, then you can run the following commands (It’s important to run it with the full path, otherwise<br>you will be running the built-in “time” command):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/usr/bin/time uname</div><div class="line">/usr/bin/time -v uname</div></pre></td></tr></table></figure>
+<p>You will notice that the output is slightly different to the output of the built-in “time” command.</p>
+<p>Running the following command will produce a similar output to the built-in “time” function:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/bin/time -f &quot;%C  %Us user %Ss system %P cpu %e total&quot; uname</div></pre></td></tr></table></figure>
+<p>Have fun :-)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;The default &lt;code&gt;time&lt;/code&gt; command in most Linux distributions is not a REAL command, it comes as built-in functionality of shells lik
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://omid.sh/tags/linux/"/>
+    
+      <category term="shell" scheme="http://omid.sh/tags/shell/"/>
+    
+      <category term="bash" scheme="http://omid.sh/tags/bash/"/>
+    
+      <category term="zsh" scheme="http://omid.sh/tags/zsh/"/>
+    
+      <category term="command" scheme="http://omid.sh/tags/command/"/>
+    
+  </entry>
+  
+</feed>
