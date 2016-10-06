@@ -20,6 +20,6 @@
     "hexo-server": "^0.2.0"
   },
   "scripts": {
-    "deploy": "hexo generate && git add . && git commit -av && git push origin main && git subtree push -P public origin master"
+    "deploy": "hexo generate && git add . && git commit -av && git push origin source && git subtree push -P public origin master"
   }
 }
