@@ -35,9 +35,9 @@ html
     link(rel='stylesheet', type='text/css', href=root + '/css/normalize.css')
     link(rel='stylesheet', type='text/css', href=root + '/css/highlight.css')
     link(rel='stylesheet', type='text/css', href=root + '/css/noise.css')
-    link(rel='stylesheet', type='text/css', href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css")
+    link(rel='stylesheet', type='text/css', href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css")
     link(rel='Shortcut Icon', type='image/x-icon',href=url_for('favicon.ico'))
-    link(rel='stylesheet', type='text/css', href='//fonts.useso.com/css?family=Lato')
+    link(rel='stylesheet', type='text/css', href='//fonts.googleapis.com/css?family=Lato')
     if config.feed
       link(rel='alternate', type=feed_type, href=url_for(config.feed.path))
       
@@ -54,9 +54,9 @@ html
     block main
 
     if theme.fancybox
-      link(rel='stylesheet', type='text/css', href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css")
-      script(src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js")
-      script(src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js")
+      link(rel='stylesheet', type='text/css', href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css")
+      script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+      script(src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js")
 
       script.
         $(document).ready(function() {
