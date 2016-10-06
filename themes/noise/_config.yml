@@ -5,19 +5,19 @@ menu:
   Archives: archives
 
 social:
-  email:
+  email: omidmr@gmail.com
   twitter:
   weibo:
   github: omid
-  googleplus:
+  googleplus: omidmr
   rss: /atom.xml
 
 # Content
 fancybox: true # set to true if you want to use it
 
 duoshuo: #duoshuo_shortname
-disqus: #disqus _shortname
-google_analytics: #Google Analytics Tracking Code
+disqus: omidsh #disqus _shortname
+google_analytics: UA-53625-3 #Google Analytics Tracking Code
 google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
 
 less:
