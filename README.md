@@ -1,2 +1,1 @@
-# omid.github.io
-http://omid.sh
+Visit: http://omid.sh
