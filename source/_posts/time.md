@@ -1,13 +1,13 @@
 ---
 title: We must use "time" creatively. - Martin Luther King, Jr.
 date: 2016-10-04 15:58:01
-excerpt: false
 tags:
 - linux
 - shell
 - bash
 - zsh
 - command
+
 ---
 
 The default `time` command in most Linux distributions is not a REAL command, it comes as built-in functionality of shells like "bash".
@@ -31,3 +31,4 @@ Running the following command will produce a similar output to the built-in "tim
 ```
 
 Have fun :-)
+<!-- more -->

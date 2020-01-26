@@ -18,7 +18,7 @@ Install theme and renderers:
 ```
 git clone https://github.com/lotabout/hexo-theme-noise themes/noise
 npm install hexo-renderer-less --save
-npm install hexo-renderer-jade --save
+npm install hexo-renderer-pug --save
 ```
 
 Edit `_config.yml` in hexo root, change `theme` to `noise`.
@@ -38,6 +38,9 @@ social:
   googleplus:
   rss: /atom.xml
 fancybox: true
+infinite_scroll: false
+show_toc: true
+toc_words: "Table of Contents"
 duoshuo: #duoshuo_shortname
 disqus: #disqus _shortname
 google_analytics: #Google Analytics Tracking Code
@@ -52,10 +55,13 @@ google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
   - googleplus - Google Plus account
   - rss - RSS subscription link, learn more in [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)
 - fancybox - Enable [Fancybox](http://fancyapps.com/fancybox/)
+- infinite_scroll - Enable infinite scroll on index page
+- show_toc - To show ToC if no `toc:` is specified in post
+- toc_words - The words to show in the TOC line
 - duoshuo - [Duoshuo](http://duoshuo.com) shortname
 - disqus - [Disqus](https://disqus.com) shortname
 - google_analytics - Google Analytics Tracking Code
-- google_adsense_page_level_ads: - Google Adsense Page Level Ads Code
+- google_adsense_page_level_ads - Google Adsense Page Level Ads Code
 
 If you want to contain this theme only as a submodule, then you may be
 unwilling to keep all configuration inside theme
@@ -75,13 +81,16 @@ noise:
     googleplus:
     rss: /atom.xml
   fancybox: true
+  infinite_scroll: false
+  show_toc: true
+  toc_words: "Table of Contents"
   duoshuo: #duoshuo_shortname
   disqus: #disqus _shortname
   google_analytics: #Google Analytics Tracking Code
   google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
 ```
 
-##Features
+## Features
 
 #### Logo
 You can set a **favicon.ico** for your website, please put it into  `source` folder of hexo directory, recommended size: 32px*32px.

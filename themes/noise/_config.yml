@@ -9,15 +9,18 @@ social:
   twitter:
   weibo:
   github: omid
-  googleplus: omidmr
+  googleplus:
   rss: /atom.xml
 
 # Content
 fancybox: true # set to true if you want to use it
+infinite_scroll: false # set to true if you want to use it
+toc_words: "Table of Contents" # the line shown in toc
+show_toc_by_default: true # to show toc if `toc:` is not specified in post
 
 duoshuo: #duoshuo_shortname
-disqus: omidsh #disqus _shortname
-google_analytics: UA-53625-3 #Google Analytics Tracking Code
+disqus: omidsh
+google_analytics: UA-53625-3
 google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
 
 less:

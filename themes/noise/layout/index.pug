@@ -1,26 +1,22 @@
-extends base
-- var current_title = page.title || tag.name || category.name || site.title
-
-
+extends base.pug
 
 block title
   title= config.title
 
 block main
 
-    // Blog title and subtitle
+    //- Blog title and subtitle
     header.wrapper.header
       .container.blog-title
         a#logo.title(href=url_for('.'))= config.title
         span.subtitle= config.subtitle
         label#toggle-menu(for="menu", onclick)
           i.fa.fa-bars
-      // use checkbox hack for toggle nav-bar on small screens
+      //- use checkbox hack for toggle nav-bar on small screens
       input#menu(type="checkbox")
       .container.nav-items
         each nav, name in theme.menu
           +a_with_current(nav, __(name))
-
 
     article.wrapper
       #index-main.container.entries
@@ -36,8 +32,8 @@ block main
               .post-content
                 if post.description
                   != post.description
-                else if post.excerpt == false
-                  != post.content
+                else if post.excerpt
+                  != post.excerpt
                 else if post.content
                   - var br = post.content.indexOf('</p>')
                   if br < 0
@@ -51,13 +47,14 @@ block main
                     != list_tags(post.tags, {show_count: false, class: 'post-tag', style:'none', separator:''})
                 .post-time= post.date.format(config.date_format)
 
-    include _partial/paginator.jade
+    if !theme.infinite_scroll
+      include _partial/paginator.pug
 
     footer.footer.wrapper
       .social
         +social_icon('email', "mailto:", "fa-envelope-o")
-        +social_icon('twitter', 'http://twitter.com/', 'fa-twitter')
-        +social_icon('weibo', 'http://weibo.com/', 'fa-weibo')
+        +social_icon('twitter', 'https://twitter.com/', 'fa-twitter')
+        +social_icon('weibo', 'https://weibo.com/', 'fa-weibo')
         +social_icon('github', 'https://github.com/', 'fa-github')
         +social_icon('googleplus', 'https://plus.google.com/', 'fa-google-plus')
         +social_icon('rss', "", "fa-rss")
@@ -72,3 +69,6 @@ block main
         a(target='_blank', href='https://github.com/lotabout/hexo-theme-noise') noise
         |.
 
+    if theme.infinite_scroll
+      script(src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js")
+      script(src=root + 'js/noise.js')
